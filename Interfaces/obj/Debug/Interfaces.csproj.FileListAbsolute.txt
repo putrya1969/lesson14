@@ -1,0 +1,7 @@
+C:\Users\D.Putrya\source\repos\Lesson14\Interfaces\bin\Debug\Interfaces.exe.config
+C:\Users\D.Putrya\source\repos\Lesson14\Interfaces\bin\Debug\Interfaces.exe
+C:\Users\D.Putrya\source\repos\Lesson14\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\D.Putrya\source\repos\Lesson14\Interfaces\obj\Debug\Interfaces.csprojAssemblyReference.cache
+C:\Users\D.Putrya\source\repos\Lesson14\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\D.Putrya\source\repos\Lesson14\Interfaces\obj\Debug\Interfaces.exe
+C:\Users\D.Putrya\source\repos\Lesson14\Interfaces\obj\Debug\Interfaces.pdb
