@@ -5,3 +5,11 @@ C:\Users\D.Putrya\source\repos\Lesson14\Interfaces\obj\Debug\Interfaces.csprojAs
 C:\Users\D.Putrya\source\repos\Lesson14\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
 C:\Users\D.Putrya\source\repos\Lesson14\Interfaces\obj\Debug\Interfaces.exe
 C:\Users\D.Putrya\source\repos\Lesson14\Interfaces\obj\Debug\Interfaces.pdb
+D:\Beetroot\Lesson3\lesson14\Interfaces\bin\Debug\Interfaces.exe.config
+D:\Beetroot\Lesson3\lesson14\Interfaces\bin\Debug\Interfaces.exe
+D:\Beetroot\Lesson3\lesson14\Interfaces\bin\Debug\Interfaces.pdb
+D:\Beetroot\Lesson3\lesson14\Interfaces\obj\Debug\Interfaces.csproj.AssemblyReference.cache
+D:\Beetroot\Lesson3\lesson14\Interfaces\obj\Debug\Interfaces.csproj.SuggestedBindingRedirects.cache
+D:\Beetroot\Lesson3\lesson14\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+D:\Beetroot\Lesson3\lesson14\Interfaces\obj\Debug\Interfaces.exe
+D:\Beetroot\Lesson3\lesson14\Interfaces\obj\Debug\Interfaces.pdb

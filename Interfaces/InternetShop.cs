@@ -8,8 +8,10 @@ namespace Interfaces
 {
     class InternetShop
     {
-        List<Client> _clients;
-        List<Order> _orders;
-        List<Product> _products;
+        IStoreProduct storeProduct;
+        public InternetShop(IStoreProduct products)
+        {
+            storeProduct = products;
+        }
     }
 }

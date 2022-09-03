@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    class OrderItem
+    internal interface IProductValidator
     {
-        public Phone Product { get; set; }
-        public int Quantity { get; set; }
+        bool IsValid (IProduct product);
     }
 }

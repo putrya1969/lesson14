@@ -17,12 +17,15 @@ namespace Interfaces
             //    new TextPhoneSaver());
             //store.Process();
             var menu = CreateMenu();
-            menu.Execute();
+            var userInputProcessor = new UserInputProcessor(menu);
+            userInputProcessor.Process();
+            Console.WriteLine(userInputProcessor.CurrentMenuItem.Description);
+            Console.ReadKey();
         }
 
         public static MenuItem CreateMenu()
         {
-            var MainMenu = new MenuItem("Main Menu", "", "Main menu of programm", new List<MenuItem>
+            var MainMenu = new MenuItem("Main Menu", "m", "Main menu of programm", new List<MenuItem>
         {
             new MenuItem("Product", "p", "Work with products: adding, editing", new List<MenuItem>
             {

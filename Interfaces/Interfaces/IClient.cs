@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    class OrderItem
+    internal interface IClient
     {
-        public Phone Product { get; set; }
-        public int Quantity { get; set; }
+        string LastName { get; set; }
+        string FirstName { get; set; }
+        string PhoneNumber { get; set; }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Interfaces
 {
@@ -19,37 +20,6 @@ namespace Interfaces
             Key = key;
             Description = description;
             Children = subItems;
-        }
-        public void Execute()
-        {
-            PrintInfo();
-            var menuItem = ProcessInput(GetKeys());
-            //Console.WriteLine($"{CommandName}:{Key} - {Description}");
-        }
-
-        private string[] GetKeys()
-        {
-            return Children.Select(s => s.Key).ToArray();
-        }
-
-        private void PrintInfo()
-        {
-            Console.Clear();
-            foreach (var item in Children)
-            {
-                Console.WriteLine($"{item.CommandName} press: {item.Key}");
-            }
-        }
-
-
-
-        private MenuItem ProcessInput(string[] keys)
-        {
-            do 
-            {
-                if (keys.Contains(Console.ReadLine()))
-                    return null;
-            } while(true);
         }
 
         //private MenuItem GetSubMenuItem(MenuItem menuItem, string key)
