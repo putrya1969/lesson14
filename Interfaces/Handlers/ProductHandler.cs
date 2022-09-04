@@ -78,17 +78,18 @@ namespace Interfaces
 
         public void Process()
         {
-            Console.Clear();
-            Console.WriteLine(productHandlerManual);
             string[] validUserInput = new string[] { "a", "d", "v", "e", "f", "r" };
             bool toExit;
             do
             {
+                Console.Clear();
+                Console.WriteLine(productHandlerManual);
                 toExit = true;
                 string userInput = Console.ReadLine().ToLower();
                 if (validUserInput.Contains(userInput))
                 {
                     userInput = userInput.ToLower();
+                    Console.Clear();
                     switch (userInput)
                     {
                         case "a":
@@ -123,7 +124,8 @@ namespace Interfaces
                             }
                     }
                 }
-
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
 
             } while (toExit);
         }

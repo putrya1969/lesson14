@@ -17,5 +17,9 @@ namespace Interfaces
             Price = price;
             Quantity = quantity;
         }
+        public override string ToString()
+        {
+            return $"model: {Model} price: {Price}$ Qty: {Quantity}";
+        }
     }
 }
