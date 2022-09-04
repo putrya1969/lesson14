@@ -4,40 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interfaces.Handlers
+namespace Interfaces
 {
-    internal class ClientHandler : IStoreClient
+    internal class ClientHandler : IShopHandler<IClient>
     {
-        public List<IClient> Clients { get; set; }
+        public List<IClient> Collection { get; set; }
 
-        public void AddClient(IClient client)
+        public void Add()
         {
-            Clients.Add( client);
         }
 
-        public void DeleteClient(IClient client)
+        public void Delete()
         {
-            Clients = Clients.Except(new List<IClient>() {client}).ToList();
         }
 
-        public void EditClient(string lastName, IClient editedClient)
+        public void Edit(string lastName, IClient editedClient)
         {
-            var pos = Clients.FindIndex(c => c.LastName == lastName);
-            Clients[pos] = editedClient;
+            var pos = Collection.FindIndex(c => c.LastName == lastName);
+            Collection[pos] = editedClient;
         }
 
-        public IClient GetClient(string lastName)
+        public IClient Get(string lastName)
         {
-            return Clients.Where(c=> c.LastName == lastName).FirstOrDefault();
+            return Collection.Where(c=> c.LastName == lastName).FirstOrDefault();
         }
 
-        public void ViewClients()
+        public void Process()
         {
-            foreach (var item in Clients)
+            throw new NotImplementedException();
+        }
+
+        public void View()
+        {
+            foreach (var item in Collection)
             {
                 Console.WriteLine(item);
             };
         }
-
     }
 }

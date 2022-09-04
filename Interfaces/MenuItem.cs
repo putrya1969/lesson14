@@ -12,14 +12,15 @@ namespace Interfaces
         public string CommandName { get; set; }
         public string Key { get; set; }
         public string Description{ get; set; }
-        public Command Command { get; set; }
+        public ICommand<IClient> Command { get; set; }
         public List<MenuItem> Children { get; set; }
-        public MenuItem(string commandName, string key, string description, List<MenuItem> subItems)
+        public MenuItem(string commandName, string key, string description, List<MenuItem> subItems, ICommand<IClient> command)
         {
             CommandName = commandName;
             Key = key;
             Description = description;
             Children = subItems;
+            Command = command;
         }
 
         //private MenuItem GetSubMenuItem(MenuItem menuItem, string key)

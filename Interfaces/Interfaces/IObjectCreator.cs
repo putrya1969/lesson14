@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    class Buyer
+    internal interface IObjectCreator<T>
     {
-        public string LastName { get; set; }
-        public string FirstName { get; set; }
-        public string PhoneNumber { get; set; }
+        T Create(string sourceString);
+        bool IsValid(T element);
+
     }
 }

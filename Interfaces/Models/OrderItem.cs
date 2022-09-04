@@ -8,7 +8,8 @@ namespace Interfaces
 {
     class OrderItem
     {
-        public Phone Product { get; set; }
+        public IProduct Product { get; set; }
         public int Quantity { get; set; }
+        public decimal OrderItemPrice { get; set; }
     }
 }

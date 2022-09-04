@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    class Command
+    internal interface IStorage<T>
     {
-        public char Key { get; set; }
-        public string Description { get; set; }
-
+        List<T> Objects { get; set; }
 
     }
 }

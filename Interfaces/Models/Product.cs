@@ -6,20 +6,16 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    class Phone : IProduct
+    internal class Product : IProduct
     {
         public string Model { get; set; }
         public decimal Price { get; set; }
         public int Quantity { get; set; }
-        public Phone(string model, decimal price, int quantity)
+        public Product(string model, decimal price, int quantity)
         {
             Model = model;
             Price = price;
             Quantity = quantity;
-        }
-        string IProduct.ToString()
-        {
-            return $"{Model} - {Price} - {Quantity}";
         }
     }
 }

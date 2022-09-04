@@ -10,9 +10,8 @@ namespace Interfaces
     internal class UserInputProcessor
     {
         public MenuItem rootItem { get; set; }
-
         public MenuItem CurrentMenuItem { get; set; }
-        public Command SelectedCommand { get; set; }
+        public AddClient SelectedCommand { get; set; }
 
         public UserInputProcessor(MenuItem menuItem)
         {
