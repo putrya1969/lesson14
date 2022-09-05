@@ -59,7 +59,7 @@ namespace Interfaces
             foreach (var item in Collection)
             {
                 Console.WriteLine($"{Collection.IndexOf(item)}. {item}");
-            };
+            }
         }
 
         public void Edit()
@@ -142,6 +142,10 @@ namespace Interfaces
                 Console.ReadKey();
 
             } while (!toExit);
+        }
+        public IClient GetClientById(int id)
+        {
+            return Collection[id];
         }
 
         private bool ValidInput(string[] validValue, string userKey)

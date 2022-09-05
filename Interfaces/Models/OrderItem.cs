@@ -8,24 +8,18 @@ namespace Interfaces
 {
     class OrderItem
     {
-        public IProduct Product { get; set; }
+        public string ProductName { get; set; }
         public int Quantity { get; set; }
-        public decimal OrderItemPrice 
-        {
-            get 
-            {
-                return OrderItemPrice;
-            }
-            set
-            {
-                OrderItemPrice = Product.Price * Quantity;
-            } 
-        }
-
+        public decimal OrderItemPrice { get; set; }
         public OrderItem(IProduct product, int quantity)
         {
-            Product = product;
+            ProductName = product.Model;
             Quantity = quantity;
+            OrderItemPrice = product.Price*quantity;
+        }
+        public override string ToString()
+        {
+            return $"{ProductName}:{Quantity}:{OrderItemPrice}$";
         }
     }
 }

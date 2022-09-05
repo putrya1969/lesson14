@@ -48,6 +48,7 @@
     <Compile Include="Creators\OrderCreator.cs" />
     <Compile Include="Creators\ProductCreator.cs" />
     <Compile Include="FileHandler.cs" />
+    <Compile Include="FileSavers\OrderSaver .cs" />
     <Compile Include="Handlers\ClientHandler.cs" />
     <Compile Include="Handlers\OrderHandler.cs" />
     <Compile Include="Handlers\ProductHandler.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ClientStorage .cs" />
+    <Compile Include="Models\OrderStorage.cs" />
     <Compile Include="Models\ProductStorage.cs" />
     <Compile Include="FileSavers\ClientSaver.cs" />
     <Compile Include="FileSavers\ProductSaver.cs" />

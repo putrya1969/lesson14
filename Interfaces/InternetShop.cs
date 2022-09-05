@@ -11,8 +11,8 @@ namespace Interfaces
         IShopHandler<IClient> _clients;
         IShopHandler<IProduct> _products;
         IShopHandler<IOrder> _orders;
-        //public InternetShop(IShopHandler<IProduct> products, IShopHandler<IClient> clients, IShopHandler<IOrder> orders)
-        public InternetShop(IShopHandler<IProduct> products, IShopHandler<IClient> clients)
+        public InternetShop(IShopHandler<IProduct> products, IShopHandler<IClient> clients, IShopHandler<IOrder> orders)
+        //public InternetShop(IShopHandler<IProduct> products, IShopHandler<IClient> clients)
         {
             _products = products;
             _clients = clients;

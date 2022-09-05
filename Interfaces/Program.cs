@@ -12,9 +12,12 @@ namespace Interfaces
         static void Main(string[] args)
         {
             string productsFile = Path.Combine(Environment.CurrentDirectory, "products.txt");
+            string clientsFile = Path.Combine(Environment.CurrentDirectory, "clients.txt");
+            string ordersFile = Path.Combine(Environment.CurrentDirectory, "orders.txt");
 
             var internetStore = new InternetShop(new ProductHandler(new ProductStorage(new FileHandler(productsFile).Content).Objects),
-                new ClientHandler(new Cli));
+                                                 new ClientHandler(new ClientStorage(new FileHandler(clientsFile).Content).Objects),
+                                                 new OrderHandler(new Order) );
             internetStore.ViewStartMenu();
             #region example
             //MobileStore store = new MobileStore(

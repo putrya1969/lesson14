@@ -8,8 +8,14 @@ namespace Interfaces
 {
     class Order : IOrder
     {
-        public DateTime OrderDate { get; set; }
+        public string OrderDate { get; set; }
         public OrderItem OrderItem { get; set; }
-        IClient IOrder.Client { get; set; }
+        public string Client { get; set; }
+        public Order(IClient client, IProduct product, int quantity)
+        {
+            OrderDate = DateTime.Now.ToString("dd-MM-yy HH:mm");
+            OrderItem = new OrderItem(product, quantity);
+            Client = client.ToString();
+        }
     }
 }
