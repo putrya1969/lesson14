@@ -10,6 +10,22 @@ namespace Interfaces
     {
         public IProduct Product { get; set; }
         public int Quantity { get; set; }
-        public decimal OrderItemPrice { get; set; }
+        public decimal OrderItemPrice 
+        {
+            get 
+            {
+                return OrderItemPrice;
+            }
+            set
+            {
+                OrderItemPrice = Product.Price * Quantity;
+            } 
+        }
+
+        public OrderItem(IProduct product, int quantity)
+        {
+            Product = product;
+            Quantity = quantity;
+        }
     }
 }

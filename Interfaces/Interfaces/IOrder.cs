@@ -1,6 +1,11 @@
-﻿namespace Interfaces
+﻿using System;
+
+namespace Interfaces
 {
-    public interface IOrder
+    internal interface IOrder
     {
+        DateTime OrderDate { get; set; }
+        IClient Client { get; set; }
+        OrderItem OrderItem { get; set; }
     }
 }

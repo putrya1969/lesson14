@@ -13,10 +13,8 @@ namespace Interfaces
         {
             string productsFile = Path.Combine(Environment.CurrentDirectory, "products.txt");
 
-            var internetStore = new InternetShop(
-                new ProductHandler(
-                    new ProductStorage(
-                        new FileHandler(productsFile).Content).Objects));
+            var internetStore = new InternetShop(new ProductHandler(new ProductStorage(new FileHandler(productsFile).Content).Objects),
+                new ClientHandler(new Cli));
             internetStore.ViewStartMenu();
             #region example
             //MobileStore store = new MobileStore(

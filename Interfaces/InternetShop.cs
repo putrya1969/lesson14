@@ -12,10 +12,10 @@ namespace Interfaces
         IShopHandler<IProduct> _products;
         IShopHandler<IOrder> _orders;
         //public InternetShop(IShopHandler<IProduct> products, IShopHandler<IClient> clients, IShopHandler<IOrder> orders)
-        public InternetShop(IShopHandler<IProduct> products)
+        public InternetShop(IShopHandler<IProduct> products, IShopHandler<IClient> clients)
         {
             _products = products;
-            //_clients = clients;
+            _clients = clients;
             //_orders = orders;
             ViewStartMenu();
             var userSelect = Console.ReadLine();

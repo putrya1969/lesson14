@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interfaces
+namespace Interfaces.Creators
 {
-    internal interface IProductValidator
+    internal class OrderCreator
     {
-        bool IsValid (IProduct product);
     }
 }

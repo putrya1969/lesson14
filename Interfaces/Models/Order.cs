@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    class Order
+    class Order : IOrder
     {
         public DateTime OrderDate { get; set; }
-        public Client Client { get; set; }
-        public List<OrderItem> OrderItems { get; set; }
+        public OrderItem OrderItem { get; set; }
+        IClient IOrder.Client { get; set; }
     }
 }
