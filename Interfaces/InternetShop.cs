@@ -45,9 +45,9 @@ namespace Interfaces
         {
             var stringBuilder = new StringBuilder();
             stringBuilder.AppendLine("<<Welcome to the internet store>>");
-            stringBuilder.AppendLine("For work with Clients press '1'");
-            stringBuilder.AppendLine("For work with Products press '2'");
-            stringBuilder.AppendLine("For work with Orders press '3'");
+            stringBuilder.AppendLine("For work with Clients press\t '1'");
+            stringBuilder.AppendLine("For work with Products press\t '2'");
+            stringBuilder.AppendLine("For work with Orders press\t '3'");
             Console.WriteLine(stringBuilder);
         }
     }

@@ -52,6 +52,7 @@
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IObjectCreator.cs" />
     <Compile Include="Interfaces\IProduct.cs" />
+    <Compile Include="Interfaces\ISaver.cs" />
     <Compile Include="Interfaces\IShopHandler.cs" />
     <Compile Include="Interfaces\IStorage.cs" />
     <Compile Include="Interfaces\IValidator.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductStorage.cs" />
+    <Compile Include="ProductSaver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInputProcessor.cs" />

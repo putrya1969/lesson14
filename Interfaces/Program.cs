@@ -18,6 +18,7 @@ namespace Interfaces
                     new ProductStorage(
                         new FileHandler(productsFile).Content).Objects));
             internetStore.ViewStartMenu();
+            #region example
             //MobileStore store = new MobileStore(
             //    new ConsolePhoneReader(), 
             //    new GeneralPhoneBinder(),
@@ -31,8 +32,9 @@ namespace Interfaces
             //Console.ReadKey();
             //IShopHandler<IClient> clientHandler = new ClientHandler();
             //IShopHandler<IProduct> productHandler = new ProductHandler();
+            #endregion
         }
-
+        #region Menu
 
 
         //public static MenuItem CreateMenu()
@@ -60,10 +62,9 @@ namespace Interfaces
         //});
         //    return MainMenu;
         //}
+        #endregion
     }
-
-
-
+    #region Example Interface
     //class Phone
     //{
     //    public string Model { get; }
@@ -158,4 +159,5 @@ namespace Interfaces
     //        writer.WriteLine(phone.Price);
     //    }
     //}
+    #endregion
 }

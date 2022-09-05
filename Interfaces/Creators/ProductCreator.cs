@@ -27,7 +27,7 @@ namespace Interfaces
 
         public bool IsValid(IProduct element)
         {
-            return (element.Model != "")&&(element.Price > 0);
+            return (!string.IsNullOrEmpty(element.Model))&&(element.Price > 0);
         }
     }
 }
