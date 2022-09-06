@@ -22,7 +22,7 @@ namespace Interfaces
             {
                 using (StreamWriter sw = new StreamWriter(FileName, true))
                 {
-                    sw.WriteLine($"\n{element.OrderDate}*{element.Client}*{element.OrderItem}");
+                    sw.WriteLine($"\n{element.OrderDate}*{element.ClientFullName}*{element.OrderItem.ToString()}");
                 }
             }
             else
@@ -38,7 +38,7 @@ namespace Interfaces
             {
                 foreach (var item in elements)
                 {
-                    sw.WriteLine($"\n{item.OrderDate}*{item.Client}*{item.OrderItem}");
+                    sw.WriteLine($"{item.OrderDate}*{item.ClientFullName}*{item.OrderItem.ToString()}");
                 }
             }
         }

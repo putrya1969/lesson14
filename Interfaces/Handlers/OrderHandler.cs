@@ -25,6 +25,7 @@ namespace Interfaces
             Collection = collections;
             ProductHandler = productHandler;
             ClientHandler = clientHandler;
+            OrderSaver = new OrderSaver(fileName);
         }
 
         public void Add()
@@ -54,7 +55,11 @@ namespace Interfaces
                 Console.WriteLine("Invalid value quantity");
                 return;
             }
-            var order = new OrderCreator(currentClient, currentProduct, quantity).CreatedOrder;
+            var order = new OrderCreator(DateTime.Now.ToString("dd-MM-yy HH:mm"),
+                currentClient.ToString(), 
+                currentProduct.Model,
+                currentProduct.Price,
+                quantity).CreatedOrder;
             if (order == null)
             {
                 Console.WriteLine("Invalid format data\nProduct wasn't added");

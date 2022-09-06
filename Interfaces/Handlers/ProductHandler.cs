@@ -47,14 +47,12 @@ namespace Interfaces
             var index = int.Parse(Console.ReadLine());
             Collection.RemoveAt(index);
             ProductSaver.ReSaveData(Collection);
-            //Collection = Collection.Except(new List<IProduct> { Collection[index] }).ToList();
         }
 
         public void Delete(int index)
         {
             Collection.RemoveAt(index);
             ProductSaver.ReSaveData(Collection);
-            //Collection = Collection.Except(new List<IProduct> { Collection[index] }).ToList();
         }
 
         public void View()
@@ -145,11 +143,6 @@ namespace Interfaces
                 Console.ReadKey();
 
             } while (!toExit);
-        }
-
-        private bool ValidInput(string[] validValue, string userKey)
-        {
-            return validValue.Contains(userKey);
         }
 
         private static string ReadInputWithDefault(string defaultValue, string caret = "> ")

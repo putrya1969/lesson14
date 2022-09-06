@@ -9,14 +9,14 @@ namespace Interfaces
     internal class OrderCreator 
     {
         public IOrder CreatedOrder { get; set; }
-        public OrderCreator(IClient client, IProduct product, int quantity)
+        public OrderCreator(string orderDate, string client, string productName, decimal productPrice ,int quantity)
         {
-            CreatedOrder = Create(client, product, quantity);
+            CreatedOrder = Create(orderDate, client, productName, productPrice, quantity);
         }
-        public IOrder Create(IClient client, IProduct product, int quantity)
+        public IOrder Create(string orderDate, string client, string productName, decimal productPrice, int quantity)
         {
             IOrder order = null;
-            order = new Order(client, product, quantity);
+            order = new Order(orderDate, client, productName, productPrice, quantity);
             if (IsValid(order))
                 return order;
             else
@@ -25,7 +25,7 @@ namespace Interfaces
 
         public bool IsValid(IOrder element)
         {
-            return (!string.IsNullOrEmpty(element.Client)) && (!string.IsNullOrEmpty(element.OrderDate));
+            return (!string.IsNullOrEmpty(element.ClientFullName)) && (!string.IsNullOrEmpty(element.OrderDate));
         }
     }
 }

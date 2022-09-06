@@ -9,13 +9,17 @@ namespace Interfaces
     class Order : IOrder
     {
         public string OrderDate { get; set; }
+        public string ClientFullName { get; set; }
         public OrderItem OrderItem { get; set; }
-        public string Client { get; set; }
-        public Order(IClient client, IProduct product, int quantity)
+
+
+        public Order(string orderDate, string client, string product, decimal productPrice, int quantity)
         {
-            OrderDate = DateTime.Now.ToString("dd-MM-yy HH:mm");
-            OrderItem = new OrderItem(product, quantity);
-            Client = client.ToString();
+            
+            OrderDate = orderDate;
+            ClientFullName = client;
+            OrderItem = new OrderItem(product, productPrice, quantity);
+            
         }
     }
 }

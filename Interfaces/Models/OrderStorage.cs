@@ -14,7 +14,13 @@ namespace Interfaces
         {
             for (int i = 0; i < sourceArr.Length; i++)
             {
-                var order = new OrderCreator(sourceArr[i]).CreatedProduct;
+                var orderFields = sourceArr[i].Split(new string[] { "*" }, StringSplitOptions.RemoveEmptyEntries);
+
+                var order = new OrderCreator(orderFields[0], 
+                    orderFields[1], 
+                    orderFields[2], 
+                    Decimal.Parse(orderFields[3]), 
+                    int.Parse(orderFields[4])).CreatedOrder;
                 if (order != null)
                     Objects.Add(order);
             }

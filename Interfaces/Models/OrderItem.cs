@@ -11,15 +11,15 @@ namespace Interfaces
         public string ProductName { get; set; }
         public int Quantity { get; set; }
         public decimal OrderItemPrice { get; set; }
-        public OrderItem(IProduct product, int quantity)
+        public OrderItem(string productModel, decimal productPrice, int quantity)
         {
-            ProductName = product.Model;
+            ProductName = productModel;
             Quantity = quantity;
-            OrderItemPrice = product.Price*quantity;
+            OrderItemPrice = productPrice*quantity;
         }
         public override string ToString()
         {
-            return $"{ProductName}:{Quantity}:{OrderItemPrice}$";
+            return $"{ProductName}*{Quantity}*{OrderItemPrice}";
         }
     }
 }

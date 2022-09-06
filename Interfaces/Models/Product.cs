@@ -19,7 +19,7 @@ namespace Interfaces
         }
         public override string ToString()
         {
-            return $"model: {Model}\tprice: {Price}$\t Qty: {Quantity}";
+            return $"{Model}${Price}${Quantity}";
         }
     }
 }

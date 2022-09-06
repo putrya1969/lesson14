@@ -15,9 +15,10 @@ namespace Interfaces
             string clientsFile = Path.Combine(Environment.CurrentDirectory, "clients.txt");
             string ordersFile = Path.Combine(Environment.CurrentDirectory, "orders.txt");
 
-            var internetStore = new InternetShop(new ProductHandler(new ProductStorage(new FileHandler(productsFile).Content).Objects),
-                                                 new ClientHandler(new ClientStorage(new FileHandler(clientsFile).Content).Objects),
-                                                 new OrderHandler(new Order) );
+            var productHandler = new ProductHandler(new ProductStorage(new FileHandler(productsFile).Content).Objects);
+            var clientHandler = new ClientHandler(new ClientStorage(new FileHandler(clientsFile).Content).Objects);
+            var orderHandler = new OrderHandler(new OrderStorage(new FileHandler(ordersFile).Content).Objects, productHandler, clientHandler);
+            var internetStore = new InternetShop(productHandler, clientHandler, orderHandler);
             internetStore.ViewStartMenu();
             #region example
             //MobileStore store = new MobileStore(
