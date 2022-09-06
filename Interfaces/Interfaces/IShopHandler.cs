@@ -13,7 +13,6 @@ namespace Interfaces
         void Delete();
         void Process();
         void View();
-
         void ResaveCollection();
     }
 }

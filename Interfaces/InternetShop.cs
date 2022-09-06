@@ -16,29 +16,37 @@ namespace Interfaces
             _products = products;
             _clients = clients;
             _orders = orders;
-            ViewStartMenu();
-            var userSelect = Console.ReadLine();
-            switch (userSelect)
+            bool breakeApp = false;
+            while (!breakeApp)
             {
-                case "1":
-                    {
-                        _clients.Process();
-                        break;
-                    }
-                case "2":
-                    {
-                        _products.Process();
-                        break;
-                    }
-                case "3":
-                    {
-                        _orders.Process();
-                        break;
-                    }
+                Console.Clear();
+                ViewStartMenu();
+                var userSelect = Console.ReadLine().ToLower();
+                switch (userSelect)
+                {
+                    case "1":
+                        {
+                            _clients.Process();
+                            break;
+                        }
+                    case "2":
+                        {
+                            _products.Process();
+                            break;
+                        }
+                    case "3":
+                        {
+                            _orders.Process();
+                            break;
+                        }
+                    case "x":
+                        {
+                            breakeApp = true;
+                            break;
+                        }
+                }
             }
         }
-
-
 
         public void ViewStartMenu()
         {
@@ -47,6 +55,7 @@ namespace Interfaces
             stringBuilder.AppendLine("For work with Clients press\t '1'");
             stringBuilder.AppendLine("For work with Products press\t '2'");
             stringBuilder.AppendLine("For work with Orders press\t '3'");
+            stringBuilder.AppendLine("For quit \t\t\t 'X'");
             Console.WriteLine(stringBuilder);
         }
     }

@@ -9,10 +9,8 @@ namespace Interfaces
 {
     internal class OrderHandler : IShopHandler<IOrder>
     {
-        readonly string orderHandlerManual = "For add new order press\t\t 'A'\n" +
+        readonly string orderHandlerManual = "For add new order press\t\t\t 'A'\n" +
                                             "For view all orders press\t\t 'V'\n" +
-                                            //"For edit order press\t\t\t 'E'\n" +
-                                            //"For search order press\t\t 'F'\n" +
                                             "For return to previous menu press\t 'R'";
         public List<IOrder> Collection { get; set; }
         public IShopHandler<IProduct> ProductHandler { get; }
@@ -81,7 +79,6 @@ namespace Interfaces
 
         public void Process()
         {
-            //string[] validUserInput = new string[] { "a", "v", "e", "f", "r" };
             string[] validUserInput = new string[] { "a", "v", "r" };
             bool toExit;
             do
@@ -106,16 +103,6 @@ namespace Interfaces
                                 View();
                                 break;
                             }
-                        //case "e":
-                        //    {
-                        //        Edit();
-                        //        break;
-                        //    }
-                        //case "f":
-                        //    {
-                        //        Search();
-                        //        break;
-                        //    }
                         case "r":
                             {
                                 toExit = true;
@@ -141,6 +128,7 @@ namespace Interfaces
 
         public void View()
         {
+            Console.WriteLine("#  Date\t\t\tClient\t\t\t\tModel\t\tQty\tPrice\tTotal price");
             foreach (var item in Collection)
             {
                 Console.WriteLine($"{Collection.IndexOf(item)}. {item}");

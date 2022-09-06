@@ -7,5 +7,7 @@ namespace Interfaces
         string OrderDate { get; set; }
         string ClientFullName { get; set; }
         OrderItem OrderItem { get; set; }
+
+        string OrderPrice { get; set; }
     }
 }

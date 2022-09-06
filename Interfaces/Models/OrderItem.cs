@@ -15,7 +15,7 @@ namespace Interfaces
         {
             ProductName = productModel;
             Quantity = quantity;
-            OrderItemPrice = productPrice*quantity;
+            OrderItemPrice = productPrice;
         }
         public override string ToString()
         {
