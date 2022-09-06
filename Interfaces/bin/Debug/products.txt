@@ -1,5 +1,4 @@
 Samsung M11*20.5*7
 Xiaomi 10C*18.7*15
-Nokia 3210*53.8*7
-
-Xiaomi 10 Note*35.7*3
+Nokia 3210*53.8*5
+Xiaomi 10 Note*35.7*0

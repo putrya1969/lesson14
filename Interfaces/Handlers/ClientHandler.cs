@@ -228,5 +228,10 @@ namespace Interfaces
             Console.Write(caret);
             Console.Write(buffer.ToArray());
         }
+
+        public void ResaveCollection()
+        {
+            ClientSaver.ReSaveData(Collection);
+        }
     }
 }

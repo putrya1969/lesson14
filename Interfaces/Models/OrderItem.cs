@@ -19,6 +19,10 @@ namespace Interfaces
         }
         public override string ToString()
         {
+            return $"{ProductName} {Quantity} {OrderItemPrice}";
+        }
+        public string ToFile()
+        {
             return $"{ProductName}*{Quantity}*{OrderItemPrice}";
         }
     }

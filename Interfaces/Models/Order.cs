@@ -19,7 +19,11 @@ namespace Interfaces
             OrderDate = orderDate;
             ClientFullName = client;
             OrderItem = new OrderItem(product, productPrice, quantity);
-            
+        }
+
+        public override string ToString()
+        {
+            return $"{OrderDate} {ClientFullName} {OrderItem.ProductName} {OrderItem.Quantity} {OrderItem.OrderItemPrice}";
         }
     }
 }

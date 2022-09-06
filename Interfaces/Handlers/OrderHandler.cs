@@ -39,6 +39,7 @@ namespace Interfaces
                 return;
             }
             IClient currentClient = ClientHandler.Collection[clientId];
+            Console.Clear();
             ProductHandler.View();
             Console.WriteLine("Enter product Id");
             int productId = int.Parse(Console.ReadLine());
@@ -55,6 +56,7 @@ namespace Interfaces
                 Console.WriteLine("Invalid value quantity");
                 return;
             }
+            Console.Clear();
             var order = new OrderCreator(DateTime.Now.ToString("dd-MM-yy HH:mm"),
                 currentClient.ToString(), 
                 currentProduct.Model,
@@ -67,6 +69,9 @@ namespace Interfaces
             }
             Collection.Add(order);
             OrderSaver.AppendData(order);
+            currentProduct.Quantity -= quantity;
+            ProductHandler.ResaveCollection();
+            Console.WriteLine($"Was created new order:\n{order.ToString()}");
         }
 
         public void Delete()
@@ -140,6 +145,11 @@ namespace Interfaces
             {
                 Console.WriteLine($"{Collection.IndexOf(item)}. {item}");
             }
+        }
+
+        public void ResaveCollection()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -19,8 +19,8 @@ namespace Interfaces
                 var order = new OrderCreator(orderFields[0], 
                     orderFields[1], 
                     orderFields[2], 
-                    Decimal.Parse(orderFields[3]), 
-                    int.Parse(orderFields[4])).CreatedOrder;
+                    Decimal.Parse(orderFields[4]), 
+                    int.Parse(orderFields[3])).CreatedOrder;
                 if (order != null)
                     Objects.Add(order);
             }

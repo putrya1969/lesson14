@@ -220,5 +220,10 @@ namespace Interfaces
             Console.Write(caret);
             Console.Write(buffer.ToArray());
         }
+
+        public void ResaveCollection()
+        {
+            ProductSaver.ReSaveData(Collection);
+        }
     }
 }
